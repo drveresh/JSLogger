@@ -1,4 +1,4 @@
-# SimpleJSLogger
+# JSLogger
 Very simple and useful logging API for Javascripts
 
 How it is useful
