@@ -23,7 +23,7 @@ Examples
 
 Installation
 ---
-Just download and use it in <script /> tag
+Just download and use it in script tag
 
 Sample Log
 ---
