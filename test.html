@@ -1,0 +1,65 @@
+
+<html>
+  <head><title>Simple JS Logger Test</title></head>
+  <script type="text/javascript" src="jslogger.js"></script>
+<body>
+<h2>Simple JS Logger Test</h2><br>
+It is doing following loggin and please open console to see them:<br>
+<div style="vertical-align: top">
+<div style="display: inline-block; width: 800px; border: 1px solid silver;">
+  <script>
+    var logMain = new logger("main.js", true);
+    logMain.log("Test info logging");
+    logMain.info("Test info logging");
+    logMain.warn("Test warning logging");
+    logMain.error("Test error logging");
+
+    var logMyLib = new logger("xyzLib.js", true);
+    logMyLib.log("Test info logging");
+    logMyLib.info("Test info logging");
+    logMyLib.warn("Test warning logging");
+    logMyLib.error("Test error logging");
+
+    var showInProd = false;
+    var finalProdLib = new logger("finalProd.js", showInProd);
+    console.log("DEMO: Following four sets of logging is not printed\n as it is prod type, but the log API remains same");
+    finalProdLib.log("Test info logging");
+    finalProdLib.info("Test info logging");
+    finalProdLib.warn("Test warning logging");
+    finalProdLib.error("Test error logging");
+  </script>
+
+  <h3>Case 1: Logging in a script where testing is enabling by "true" paramter</h3>
+  <p>
+    var logMain = new logger("main.js", true);<br>
+    logMain.log("Test info logging");<br>
+    logMain.info("Test info logging");<br>
+    logMain.warn("Test warning logging");<br>
+    logMain.error("Test error logging");<br>
+  </p>
+
+  <h3>Case 2: Logging in another script with testing flag, now it shows different file name as refernece in console</h3>
+  <p>
+    var logMyLib = new logger("xyzLib.js", true);<br>
+    logMyLib.log("Test info logging");<br>
+    logMyLib.info("Test info logging");<br>
+    logMyLib.warn("Test warning logging");<br>
+    logMyLib.error("Test error logging");<br>
+  </p>
+
+  <h3>Case 3: Logging in a script with 'testing' flag as 'false' via 'showInProd', so it helps NOT print everything in prod instance and also secure them  </h3>
+  <p>
+    var showInProd = false;<br>
+    var finalProdLib = new logger("finalProd.js", showInProd);<br>
+    finalProdLib.log("Test info logging");<br>
+    finalProdLib.info("Test info logging");<br>
+    finalProdLib.warn("Test warning logging");<br>
+    finalProdLib.error("Test error logging");<br>
+  </p>
+</div>
+<div style="display: inline-block; width: 400px; border: 1px solid silver;vertical-align: top;">
+  <img src="http://image.prntscr.com/image/8cff3727ddab44769e721a9b0b5b2092.png"/>
+</div>
+</div>
+</body>
+</html>

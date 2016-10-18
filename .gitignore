@@ -1,0 +1,11 @@
+.cache
+*.log
+*.class
+.idea
+Thumbs.db
+Desktop.ini
+.DS_Store
+.svn
+._*
+.Trashes
+.DS_Store
